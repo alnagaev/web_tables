@@ -1,0 +1,11 @@
+<!doctype html>
+<title>Test table</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>Developers salary</h1>
+    {{ table|safe }}
+    
+    <h2> Table visualization</h2>
+    <img id="graph" src="{{ url_for('static', filename='figure.png') }}" align="middle"/>
+
+</div>
