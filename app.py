@@ -21,6 +21,14 @@ def dev_table():
     html_table = d.html_view(d.dataframe)
     return render_template('view.html', table=html_table, title='Devs Salary Table')
 
+@app.route('/cluster')
+def cluster():
+    return render_template('color_scatter.html', title='Кластеризация НКО')
+
+@app.route('/map')
+def saratov_map():
+    return render_template('saratov_map.html', title='Карта НКО саратовской области')
+
 
 if __name__ == "__main__":
     app.run()
